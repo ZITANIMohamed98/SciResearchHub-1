@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaz\\source\\repos\\SciResearchHub\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
+      "projectUniqueName": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
       "projectName": "SciResearchHub",
-      "projectPath": "C:\\Users\\mohaz\\source\\repos\\SciResearchHub\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
+      "projectPath": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
       "packagesPath": "C:\\Users\\mohaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohaz\\source\\repos\\SciResearchHub\\SciResearchHub\\SciResearchHub\\obj\\",
+      "outputPath": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mohaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
