@@ -1,4 +1,5 @@
-﻿let collapsebutton = document.querySelectorAll(".category")
+
+let collapsebutton = document.querySelectorAll(".category")
 let t = 0;
 for (let i = 0; i < collapsebutton.length; i++) {
     collapsebutton[i].addEventListener('click', function (e) {
