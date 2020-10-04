@@ -7,60 +7,68 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+<body class="bg-light">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-info border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">SciResearchHub</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler align-content-lg-stretch" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="nav justify-content-end">
+                <div class="navbar-collapse collapse d-sm-inline-j flex-sm-row-reverse">
+                    <ul class="nav ">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">What's an Abstracted Research ?</a>
                         </li>
                     </ul>
                 </div>
-                <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                <div class="dropdown navbar-collapse collapse">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sign Up | Sign In
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Sign In</a>
+                            <a class="dropdown-item" href="#">Sign Up</a>
+                            
                         </div>
                  </div>
                 
             </div>
         </nav>
     </header>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style="background-image: url(banner.jpg);background-position: center; background-repeat: no-repeat; background-size: cover;">
         <div class="container">
-            <h1 class="display-4">SciResearchHub</h1>
-            <p class="lead">Share and Enjoy Abracted Researches in all Scientific Research fields.</p>
+            <h1 class="display-4" style="color:InfoText">SciResearchHub</h1>
+            <p class="lead" style="color:InfoText">Share and Enjoy Abracted Researches in all Scientific Research fields.</p>
         </div>
     </div>
     <div class="container">
         <main role="main" class="pb-3">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Button with data-target
-            </button>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Button with data-target
-            </button>
-            <div class="collapse" id="collapseExample">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link category" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Biology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link category" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Medicine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link category" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">computer Science</a>
+                </li>
+            </ul>
+                <div class="collapse" id="collapseExample">
 
-                <div class="row">
-                    @RenderBody()
+                    <div class="row bg-white">
+                        @RenderBody()
+                    </div>
+
                 </div>
-
-            </div>
         </main>
     </div>
 
