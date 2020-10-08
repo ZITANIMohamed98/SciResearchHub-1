@@ -35,3 +35,4 @@ C:\Users\mohaz\OneDrive\Desktop\SciResearchHub\SciResearchHub\obj\Debug\netcorea
 C:\Users\mohaz\OneDrive\Desktop\SciResearchHub\SciResearchHub\obj\Debug\netcoreapp3.1\SciResearchHub.pdb
 C:\Users\mohaz\OneDrive\Desktop\SciResearchHub\SciResearchHub\obj\Debug\netcoreapp3.1\SciResearchHub.genruntimeconfig.cache
 C:\Users\mohaz\OneDrive\Desktop\SciResearchHub\SciResearchHub\obj\Debug\netcoreapp3.1\SciResearchHub.csproj.CopyComplete
+C:\Users\mohaz\OneDrive\Desktop\SciResearchHub\SciResearchHub\bin\Debug\netcoreapp3.1\MySqlConnector.dll

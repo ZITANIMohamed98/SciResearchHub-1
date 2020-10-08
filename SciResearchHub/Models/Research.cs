@@ -7,12 +7,23 @@ namespace SciResearchHub.Models
 {
     public class Research
     {
-        public string id { get; set; }
-        public string title { get; set; }
-        public string author { get; set; }
-        public string creationDate { get; set; }
-        public string domain { get; set; }
-        public int[] ratings { get; set; }
-        public string link { get; set; }
+        public Research(object id, object title, object author, object domain, object imglink, object link, object dateCreated)
+        {
+            this.id = id;
+            this.title = title;
+            this.author = author;
+            this.domain = domain;
+            this.imglink = imglink;
+            this.link = link;
+            this.dateCreated = dateCreated;
+
+        }
+        public object id { get; set; }
+        public object title { get; set; }
+        public object author { get; set; }
+        public object domain { get; set; }
+        public object imglink { get; set; }
+        public object link { get; set; }
+        public object dateCreated { get; set; }
     }
 }

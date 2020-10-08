@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "SciResearchHub/1.0.0": {
         "dependencies": {
+          "MySqlConnector": "1.0.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -312,6 +313,17 @@
         },
         "compile": {
           "SciResearchHub.dll": {}
+        }
+      },
+      "MySqlConnector/1.0.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2013,6 +2025,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MySqlConnector/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bnQk6joP7z0k1aIk13BjrZXIakN+UobXjO8EMh/Y+L6vZ6ul9cJ8RXkD9tia86ksgFs9GqmvPgX7ILx7mOpwNQ==",
+      "path": "mysqlconnector/1.0.1",
+      "hashPath": "mysqlconnector.1.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

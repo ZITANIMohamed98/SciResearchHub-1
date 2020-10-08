@@ -1,11 +1,54 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "MySqlConnector/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/MySqlConnector.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MySqlConnector/1.0.1": {
+      "sha512": "bnQk6joP7z0k1aIk13BjrZXIakN+UobXjO8EMh/Y+L6vZ6ul9cJ8RXkD9tia86ksgFs9GqmvPgX7ILx7mOpwNQ==",
+      "type": "package",
+      "path": "mysqlconnector/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net45/MySqlConnector.xml",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net5.0/MySqlConnector.dll",
+        "lib/net5.0/MySqlConnector.xml",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.xml",
+        "lib/netcoreapp3.0/MySqlConnector.dll",
+        "lib/netcoreapp3.0/MySqlConnector.xml",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.1.0.1.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "MySqlConnector >= 1.0.1"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\mohaz\\.nuget\\packages\\": {}
@@ -13,9 +56,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
-      "projectName": "SciResearchHub",
-      "projectPath": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
+      "projectUniqueName": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciresearchHub.csproj",
+      "projectName": "SciresearchHub",
+      "projectPath": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciresearchHub.csproj",
       "packagesPath": "C:\\Users\\mohaz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\obj\\",
       "projectStyle": "PackageReference",
@@ -43,6 +86,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

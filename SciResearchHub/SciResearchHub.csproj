@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="1.0.1" />
+  </ItemGroup>
+
 </Project>

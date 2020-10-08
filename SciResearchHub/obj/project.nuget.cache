@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lOSnr7uvlhoH9qmqFckBOOoJ21iMzKt/hOzCW4uGP7vod4nqOX7THa9+fTRqSPVEUZKdPUCewlGYPM/aEvU37Q==",
+  "dgSpecHash": "RvM2HPiZUjdXvT+86fWGgw/K4mVq/E5YdDlFSEkGnIygEL8eV4kWtL3CrtIII2zuMXEtEkeUS0+/L71Q37D8ag==",
   "success": true,
   "projectFilePath": "C:\\Users\\mohaz\\OneDrive\\Desktop\\SciResearchHub\\SciResearchHub\\SciResearchHub.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mohaz\\.nuget\\packages\\mysqlconnector\\1.0.1\\mysqlconnector.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Hosting;
+using MySqlConnector;
 using SciResearchHub.Models;
 using System;
 using System.Collections.Generic;
@@ -18,22 +19,16 @@ namespace SciResearchHub.Services
         }
 
         public IWebHostEnvironment WebHostEnvironment { get; }
-
+        public List<Research> Researches { get; set; } = new List<Research>();
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "App-data", "Researches.json"); }
         }
 
-        public IEnumerable<Research> GetProducts()
+        public async Task GetProductsAsync()
         {
-            using (var jsonFileReader = File.OpenText(JsonFileName))
-            {
-                return JsonSerializer.Deserialize<Research[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-            }
+            
+            
         }
 
     }
