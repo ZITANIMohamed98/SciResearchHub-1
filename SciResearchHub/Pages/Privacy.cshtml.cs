@@ -8,29 +8,48 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using MySqlConnector;
+using SciResearchHub.Models;
+using SciResearchHub.Services;
 
 namespace SciResearchHub.Pages
 {
     public class PrivacyModel : PageModel
     {
         private readonly ILogger<PrivacyModel> _logger;
-        public List<object> values { get; set; } = new List<object>();
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public ResearchExtractService Researchservice;
+        public List<string> values = new List<string>();
+        public List<Research> researches { get; private set; }
+
+        public PrivacyModel(ILogger<PrivacyModel> logger,
+            ResearchExtractService researchservice)
         {
             _logger = logger;
+            Researchservice = researchservice;
+
         }
 
-        public async Task OnGetAsync()
+        public void OnGet()
         {
-          
-            using var connection = new MySqlConnection("server=localhost;user=root;password=GrOwUP$$20;database=sciresearchhubdata");
-            await connection.OpenAsync();
-            using var command = new MySqlCommand("SELECT Title FROM Researches;", connection);
-            using var reader = await command.ExecuteReaderAsync();
-            
-            while (await reader.ReadAsync())
+            researches =  Researchservice.GetResearches();
+            using (var connection = new MySqlConnection("server=localhost;user=root;password=GrOwUP$$20;database=sciresearchhubdata"))
             {
-                   values.Add(reader.GetValue(0));
+                try
+                {
+                    connection.Open();
+                    using var command = new MySqlCommand("SELECT * FROM Researches;", connection);
+                    using var reader = command.ExecuteReader(CommandBehavior.SingleResult);
+
+                    while (reader.Read())
+                    {
+
+                        values.Add((reader["Title"].ToString()+reader["Domain"].ToString()));
+                    }
+
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
     }
