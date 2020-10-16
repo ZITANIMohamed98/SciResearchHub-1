@@ -7,12 +7,15 @@
 
 @foreach (var Research in Model.researches)
 { 
-<div class="card @Research.Domain" style="width: 18rem; display:none">
-  <img class="card-img-top" src="@Research.Imglink " alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">@Research.Title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-   <a href="@Research.Link" class="card-link">Card link</a>
-  </div>
+<div class="card @Research.Domain shadow p-3 mb-5 bg-white rounded" style="width: 18rem; display:none">
+    <a href="@Research.Link" class="card-link">
+        <img class="card-img-top" src="@Research.Imglink " alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title text-dark">@Research.Title</h5>
+            <p class="card-text"></p>
+            
+        </div>
+
+    </a>
 </div>
 }

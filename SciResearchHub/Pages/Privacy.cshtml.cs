@@ -31,26 +31,7 @@ namespace SciResearchHub.Pages
         public void OnGet()
         {
             researches =  Researchservice.GetResearches();
-            using (var connection = new MySqlConnection("server=localhost;user=root;password=GrOwUP$$20;database=sciresearchhubdata"))
-            {
-                try
-                {
-                    connection.Open();
-                    using var command = new MySqlCommand("SELECT * FROM Researches;", connection);
-                    using var reader = command.ExecuteReader(CommandBehavior.SingleResult);
-
-                    while (reader.Read())
-                    {
-
-                        values.Add((reader["Title"].ToString()+reader["Domain"].ToString()));
-                    }
-
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
+            
         }
     }
 }

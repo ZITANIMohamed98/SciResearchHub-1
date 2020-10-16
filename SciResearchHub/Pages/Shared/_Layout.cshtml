@@ -6,16 +6,15 @@
     <title>@ViewData["Title"] - SciResearchHub</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="icon" href="~/logo.png" />
+    <link rel="icon" href="~/Images/logo.png" />
 </head>
 <body style="background-color:#EEEEEE;" >
-    <div class="jumbotron jumbotron-fluid" style="padding: 0px;background-color:#222831" >
+    <div class="jumbotron jumbotron-fluid" style="padding: 0px;background-image: url('Images/banner.png');background-position:center;" >
         <header >
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm position-sticky sticky-top bg-transparent myHeader sticky">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm ">
                 <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img style="width:60px;" src="~/logo.png" /></a>
-                    <button class="navbar-toggler align-content-lg-stretch" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img style="width:60px;" src="~/Images/logo.png" /></a>
+                    <button class="navbar-toggler align-content-lg-stretch" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-block flex-sm-row-reverse">
@@ -52,22 +51,55 @@
             </div>
         </div>
     </div>
-    <div class="container" style="background-color:#4f8a8b">
-        <main role="main" class="pb-3">
+    <div class="container-fluid"> 
+        <main role="main" class="pb-lg-4">
             <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link category NetworkingButton active" >Biology</a>
+                <li class="nav-item cat">
+                    <a class="nav-link category BiologyButton open" style="color:darkslategray">Biology</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link category Med" >Medicine</a>
+                <li class="nav-item cat">
+                    <a class="nav-link category Med" style="color:darkslategray">Medicine</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link category Compu">computer Science</a>
+                <li class="nav-item cat">
+                    <a class="nav-link category Compu" style="color:darkslategray">computer Science</a>
                 </li>
             </ul>
-            <div class="catresult" >
+            <ul class="nav nav-tabs">
+                <li class="nav-item " >
+                    <a class="nav-link Biologycat ZoologyButton open Medicinecat" style="display:none;">Zoology</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link Biologycat MicrobiologyButton"  style="display:none;">Microbiology</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link Biologycat AnatomyButton " style="display:none;">Anatomy</a>
+                </li>
+            </ul>
+            <ul class="nav nav-tabs" style="display:none;">
+                <li class="nav-item ">
+                    <a class="nav-link Medicinecat Anesthesiology open" style="color:darkslategray">Anesthesiology</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link Medicinecat Dermatology " style="color:darkslategray">Dermatology</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link Medicinecat " style="color:darkslategray">computer Science</a>
+                </li>
+            </ul>
+            <ul class="nav nav-tabs" style="display:none;">
+                <li class="nav-item ">
+                    <a class="nav-link category open" style="color:darkslategray">Biology</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link category " style="color:darkslategray">Medicine</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link category Compu" style="color:darkslategray">computer Science</a>
+                </li>
+            </ul>
+            <div class="catresult">
 
-                <div class="row" style=" background-color: #fbd46d; margin-left:3px;margin-right:3px; ">
+                <div class="row d-flex justify-content-around">
                     @RenderBody()
                 </div>
 
@@ -76,8 +108,12 @@
     </div>
     <div class="jumbotron jumbotron-fluid" >
         <div class="container">
-            <h1 class="display-4" style="color:InfoText">SciResearchHub</h1>
-            <p class="lead" style="color:InfoText">Share and Enjoy Abracted Researches in all Scientific Research fields.</p>
+            <!-- Search form -->
+            <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                       aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
         </div>
     </div>
     <footer class="border-top footer text-muted " style=" background-color: #fbd46d;">

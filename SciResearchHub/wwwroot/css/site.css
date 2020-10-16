@@ -33,9 +33,9 @@ a {
   border-color: #1861ac;
 }
 
-/* Sticky footer styles
+    /* Sticky footer styles
 -------------------------------------------------- */
-html {
+    html {
   font-size: 14px;
 }
 @media (min-width: 768px) {
@@ -44,7 +44,11 @@ html {
        
     }
 }
-
+.cat:hover {
+    color: #1b6ec2;
+    border-bottom: solid 2px #1861ac;
+    
+}
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -80,3 +84,4 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
